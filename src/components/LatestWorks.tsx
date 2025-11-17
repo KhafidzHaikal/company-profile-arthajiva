@@ -41,12 +41,14 @@ export default function LatestWorks() {
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-light text-[#3C6E71] mb-6 tracking-tight">
-            Our Latest Works
+        <div className="mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <span className="bg-gradient-to-r from-[#437B7E] via-[#5a9ca0] to-[#437B7E] bg-clip-text text-transparent">
+              Our Latest Works
+            </span>
           </h2>
-          <p className="text-xl text-gray-600 font-light max-w-2xl mx-auto">
-            A Glimpse of our Production to make Dream Project
+          <p className="text-lg text-gray-600 max-w-2xl">
+            A glimpse of our production showcasing innovative solutions that bring dream projects to life.
           </p>
         </div>
 
@@ -74,9 +76,9 @@ export default function LatestWorks() {
             >
               {projects.map((project, index) => (
                 <div key={project.id} className="w-full flex-shrink-0">
-                  <div className="relative bg-white rounded-[2.5rem] border overflow-hidden transition-all duration-500">
+                  <div className="relative bg-white rounded-[2.5rem] border overflow-hidden transition-all duration-500 shadow-xl">
                     {/* Gradient accent */}
-                    <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#3C6E71] to-blue-400" />
+                    <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#3C6E71] to-[#2d5356]" />
                     
                     {/* Content */}
                     <div className="relative z-10 p-8 md:p-16">
@@ -112,16 +114,40 @@ export default function LatestWorks() {
                           </div>
                         </div>
 
-                        {/* Image Placeholder */}
+                        {/* Professional Mockup */}
                         <div className="relative">
-                          <div className="aspect-[4/3] bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl flex items-center justify-center">
-                            <div className="text-center">
-                              <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-sm">
-                                <span className="text-[#3C6E71] font-bold text-xl">
-                                  {project.id}
-                                </span>
+                          <div className="aspect-[4/3] bg-gradient-to-br from-slate-50 to-gray-100 rounded-2xl p-8 flex items-center justify-center">
+                            {/* Device Mockup */}
+                            <div className="relative w-full max-w-sm">
+                              {/* Laptop/Desktop Mockup */}
+                              <div className="bg-gray-800 rounded-lg p-2 shadow-2xl">
+                                <div className="bg-white rounded-md h-48 p-4 relative overflow-hidden">
+                                  {/* Browser Bar */}
+                                  <div className="flex items-center space-x-2 mb-4">
+                                    <div className="w-3 h-3 bg-red-400 rounded-full" />
+                                    <div className="w-3 h-3 bg-yellow-400 rounded-full" />
+                                    <div className="w-3 h-3 bg-green-400 rounded-full" />
+                                  </div>
+                                  
+                                  {/* Content Area */}
+                                  <div className="space-y-3">
+                                    <div className="h-4 bg-[#437B7E]/20 rounded w-3/4" />
+                                    <div className="h-3 bg-gray-200 rounded w-full" />
+                                    <div className="h-3 bg-gray-200 rounded w-2/3" />
+                                    <div className="grid grid-cols-2 gap-2 mt-4">
+                                      <div className="h-16 bg-gradient-to-br from-[#437B7E]/10 to-[#5a9ca0]/10 rounded" />
+                                      <div className="h-16 bg-gradient-to-br from-gray-100 to-gray-200 rounded" />
+                                    </div>
+                                  </div>
+                                  
+                                  {/* Project Number Badge */}
+                                  <div className="absolute bottom-2 right-2 w-8 h-8 bg-[#437B7E] rounded-full flex items-center justify-center">
+                                    <span className="text-white font-bold text-xs">
+                                      {project.id}
+                                    </span>
+                                  </div>
+                                </div>
                               </div>
-                              <p className="text-gray-600 font-medium">Project Preview</p>
                             </div>
                           </div>
                         </div>

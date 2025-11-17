@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -18,13 +19,19 @@ export default function Navbar() {
 
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-slate-900/90 backdrop-blur-md shadow-lg' : 'bg-transparent'
+      isScrolled ? 'bg-white/10 backdrop-blur-md shadow-lg border-b border-white/20' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <div className="text-white font-bold text-xl">
-            ARTHAJIVA
+          <div className="flex items-center">
+            <Image
+              src="/images/logo.png"
+              alt="ARTHAJIVA Logo"
+              width={200}
+              height={100}
+              className="h-16 w-auto"
+            />
           </div>
 
           {/* Desktop Menu */}
@@ -33,7 +40,7 @@ export default function Navbar() {
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+                className="text-white hover:text-[#437B7E]/80 transition-colors duration-200 font-medium"
               >
                 {item}
               </a>
@@ -68,7 +75,7 @@ export default function Navbar() {
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+                className="block text-white hover:text-[#437B7E]/80 transition-colors duration-200 font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item}

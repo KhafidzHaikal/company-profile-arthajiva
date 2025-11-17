@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 export default function About() {
   return (
-    <section id="about" className="relative py-24 bg-white">
+    <section id="about" className="relative py-32 bg-white">
 
       {/* <div className="absolute inset-0 pointer-events-none">
 
@@ -49,62 +49,41 @@ export default function About() {
       {/* CONTENT WRAPPER                           */}
       {/* ======================================== */}
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-5xl md:text-6xl font-light mb-12 tracking-tight">
+            <span className="bg-gradient-to-r from-gray-900 via-[#437B7E] to-gray-900 bg-clip-text text-transparent">
+              About
+            </span>
+          </h2>
 
-          {/* ORGANIC GLASS CARD */}
-          <div
-            className="relative bg-white/85 backdrop-blur-xl shadow-2xl border-0 p-8 md:p-16 overflow-hidden"
-            style={{
-              borderRadius: "3rem 2rem 3.5rem 2.5rem",
-              background:
-                "linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0.85) 100%)"
-            }}
-          >
-            {/* Glow border */}
-            <div
-              // className="absolute -inset-1 bg-gradient-to-r from-[#3C6E71]/5 via-blue-400/3 to-[#3C6E71]/5 blur-xl opacity-30"
-              className="absolute -inset-1 blur-xl opacity-30"
-              style={{
-                borderRadius: "3.2rem 2.2rem 3.7rem 2.7rem"
-              }}
-            />
+          <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-12 font-light">
+            Since Artha is about{" "}
+            <span className="font-semibold text-[#437B7E]">
+              "purpose/wealth/goal"
+            </span>{" "}
+            and Jiva is about{" "}
+            <span className="font-semibold text-[#437B7E]">
+              "life,"
+            </span>{" "}
+            your brand could symbolize bringing meaningful life into both
+            the digital and real-world spaces — making every project not
+            just functional, but{" "}
+            <span className="font-semibold text-[#437B7E]">
+              alive, purposeful, and impactful.
+            </span>
+          </p>
 
-            {/* CONTENT */}
-            <div className="relative z-10">
-              <h2 className="text-5xl md:text-6xl font-light text-[#3C6E71] mb-12 text-center tracking-tight">
-                About
-              </h2>
-
-              <p className="text-xl md:text-2xl text-gray-800 leading-relaxed mb-12 text-center font-light">
-                Since Artha is about{" "}
-                <span className="font-semibold text-[#3C6E71]">
-                  "purpose/wealth/goal"
-                </span>{" "}
-                and Jiva is about{" "}
-                <span className="font-semibold text-[#3C6E71]">
-                  "life,"
-                </span>{" "}
-                your brand could symbolize bringing meaningful life into both
-                the digital and real-world spaces — making every project not
-                just functional, but{" "}
-                <span className="font-semibold text-[#3C6E71]">
-                  alive, purposeful, and impactful.
-                </span>
-              </p>
-
-              <div className="text-center">
-                <button className="group relative px-10 py-5 bg-[#3C6E71] text-white font-medium rounded-full hover:bg-[#2d5356] transition-all duration-500 shadow-lg hover:shadow-2xl transform hover:scale-105">
-                  <span className="relative z-10">
-                    Download Our Company Profile
-                  </span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#3C6E71] to-[#2d5356] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                </button>
-              </div>
-            </div>
+          <div className="text-center">
+            <button className="group relative px-10 py-5 bg-[#437B7E] text-white font-medium rounded-full hover:bg-[#3a6a6d] transition-all duration-500 transform hover:scale-105 hover:shadow-xl hover:shadow-[#437B7E]/25">
+              <span className="relative z-10">
+                Download Our Company Profile
+              </span>
+            </button>
           </div>
-
         </div>
       </div>
+      
+
     </section>
   );
 }

@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "ARTHAJIVA",
   description: "ARTHAJIVA - Next.js Application",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

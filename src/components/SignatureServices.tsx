@@ -1,96 +1,82 @@
 export default function SignatureServices() {
   const services = [
     {
-      title: "MULTIMEDIA PRODUCTION",
-      items: [
-        "2D or 3D Motion Graphics",
-        "Video Launching",
-        "Video Profile Company",
-        "Explainer Video"
+      title: "Multimedia Production",
+      description: "Bringing stories to life through compelling visual narratives that resonate with your audience and amplify your brand message.",
+      details: [
+        "2D or 3D Motion Graphics that captivate",
+        "Video Launching campaigns that convert",
+        "Company Profile videos that inspire trust",
+        "Explainer Videos that simplify complex ideas"
       ],
-      gradient: "from-[#3C6E71] to-[#2d5356]"
+      icon: "🎬"
     },
     {
-      title: "APPLICATION DEVELOPMENT",
-      items: [
-        "Mobile Application development for both iOS and Android",
-        "Web Application Development",
-        "Maintenance & Update: Regular maintenance and updating of applications"
+      title: "Application Development",
+      description: "Crafting digital experiences that seamlessly blend functionality with innovation, turning your ideas into powerful applications.",
+      details: [
+        "Cross-platform Mobile Apps for iOS and Android",
+        "Progressive Web Applications with modern UX",
+        "Ongoing maintenance and feature enhancements",
+        "Performance optimization and security updates"
       ],
-      gradient: "from-[#2d5356] to-[#3C6E71]"
+      icon: "💻"
     },
     {
-      title: "EVENT ORGANIZER",
-      items: [
-        "Concept & Creative Development",
-        "Webinar or Live Streaming Event",
-        "MICE",
-        "Man Power",
-        "Production Plan"
+      title: "Event Management",
+      description: "Creating memorable experiences that connect people and ideas, from intimate gatherings to large-scale productions.",
+      details: [
+        "Creative concept development and planning",
+        "Hybrid events with seamless live streaming",
+        "Corporate MICE events and conferences",
+        "Professional event staffing solutions",
+        "End-to-end production management"
       ],
-      gradient: "from-[#3C6E71] to-[#4a7c7f]"
+      icon: "🎪"
     }
   ];
 
   return (
-    <section className="py-24 bg-gray-50 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-[#3C6E71]/5 rounded-full blur-2xl" />
-        <div className="absolute bottom-20 right-10 w-40 h-40 bg-blue-400/5 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-cyan-300/3 rounded-full blur-3xl" />
-      </div>
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-6xl font-light text-[#3C6E71] mb-6 tracking-tight">
-            SIGNATURE SERVICES
+        <div className="mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <span className="bg-gradient-to-r from-[#437B7E] via-[#5a9ca0] to-[#437B7E] bg-clip-text text-transparent">
+              SIGNATURE SERVICES
+            </span>
           </h2>
-          <div className="w-32 h-1 bg-gradient-to-r from-transparent via-[#3C6E71] to-transparent mx-auto rounded-full" />
+          <p className="text-lg text-gray-600 max-w-2xl">
+            Breathing life into every digital solution with our comprehensive services 
+            that transform your vision into impactful reality.
+          </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+        <div className="grid md:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div
-              key={service.title}
-              className="group relative"
-              style={{
-                transform: `translateY(${index % 2 === 1 ? '2rem' : '0'})`,
-              }}
-            >
-              {/* Card */}
-              <div 
-                className="relative bg-white p-8 md:p-10 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 border border-gray-100"
-                style={{
-                  borderRadius: `${2 + index * 0.5}rem ${1.5 + index * 0.3}rem ${2.5 + index * 0.4}rem ${1.8 + index * 0.2}rem`
-                }}
-              >
-                {/* Gradient accent */}
-                <div 
-                  className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${service.gradient}`}
-                  style={{
-                    borderRadius: `${2 + index * 0.5}rem ${1.5 + index * 0.3}rem 0 0`
-                  }}
-                />
+            <div key={service.title} className="group">
+              <div className="bg-white p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-all duration-300 h-full">
+                {/* Title */}
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  {service.title}
+                </h3>
                 
-                {/* Content */}
-                <div className="relative z-10">
-                  <h3 className="text-xl md:text-2xl font-bold mb-8 leading-tight text-[#3C6E71]">
-                    {service.title}
-                  </h3>
-                  
-                  <ul className="space-y-4">
-                    {service.items.map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-[#3C6E71] rounded-full mt-2 flex-shrink-0" />
-                        <span className="text-gray-700 leading-relaxed font-light">
-                          {item}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
+                {/* Description */}
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  {service.description}
+                </p>
+                
+                {/* Details */}
+                <div className="space-y-3">
+                  {service.details.map((detail, detailIndex) => (
+                    <div key={detailIndex} className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-gradient-to-r from-[#437B7E] to-[#5a9ca0] rounded-full mt-1.5 flex-shrink-0" />
+                      <span className="text-sm text-gray-700 leading-relaxed">
+                        {detail}
+                      </span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>

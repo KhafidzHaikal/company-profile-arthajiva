@@ -1,6 +1,7 @@
 'use client';
 
 import { FaTwitter, FaLinkedin, FaInstagram, FaEnvelope, FaArrowUp } from 'react-icons/fa';
+import Image from 'next/image';
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -14,28 +15,28 @@ export default function Footer() {
           {/* Company Info */}
           <div className="max-w-md">
             <div className="flex items-center mb-4">
-              <div className="w-10 h-10 bg-[#3C6E71] rounded-lg flex items-center justify-center mr-3">
-                <span className="text-white font-bold text-lg">A</span>
-              </div>
-              <div>
-                <h3 className="text-white font-bold text-xl">ARTHAJIVA</h3>
-                <p className="text-sm text-gray-400">Digital Solutions</p>
-              </div>
+              <Image
+                src="/images/logo.png"
+                alt="ARTHAJIVA Logo"
+                width={120}
+                height={40}
+                className="h-10 w-auto"
+              />
             </div>
             <p className="text-gray-400 mb-6">
               Comprehensive digital solutions for websites, applications, and platform migration using modern technology.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-[#3C6E71] transition-colors duration-200">
+              <a href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-[#437B7E] transition-colors duration-200">
                 <FaTwitter className="text-lg" />
               </a>
-              <a href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-[#3C6E71] transition-colors duration-200">
+              <a href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-[#437B7E] transition-colors duration-200">
                 <FaLinkedin className="text-lg" />
               </a>
-              <a href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-[#3C6E71] transition-colors duration-200">
+              <a href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-[#437B7E] transition-colors duration-200">
                 <FaInstagram className="text-lg" />
               </a>
-              <a href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-[#3C6E71] transition-colors duration-200">
+              <a href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-[#437B7E] transition-colors duration-200">
                 <FaEnvelope className="text-lg" />
               </a>
             </div>
@@ -45,10 +46,10 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-4">Navigation</h4>
             <ul className="space-y-2">
-              <li><a href="#home" className="hover:text-[#3C6E71] transition-colors duration-200">Home</a></li>
-              <li><a href="#about" className="hover:text-[#3C6E71] transition-colors duration-200">About</a></li>
-              <li><a href="#client" className="hover:text-[#3C6E71] transition-colors duration-200">Client</a></li>
-              <li><a href="#contact" className="hover:text-[#3C6E71] transition-colors duration-200">Contact</a></li>
+              <li><a href="#home" className="hover:text-[#437B7E] transition-colors duration-200">Home</a></li>
+              <li><a href="#about" className="hover:text-[#437B7E] transition-colors duration-200">About</a></li>
+              <li><a href="#client" className="hover:text-[#437B7E] transition-colors duration-200">Client</a></li>
+              <li><a href="#contact" className="hover:text-[#437B7E] transition-colors duration-200">Contact</a></li>
             </ul>
           </div>
         </div>
@@ -60,7 +61,7 @@ export default function Footer() {
           </p>
           <button
             onClick={scrollToTop}
-            className="flex items-center space-x-2 text-gray-400 hover:text-[#3C6E71] transition-colors duration-200"
+            className="flex items-center space-x-2 text-gray-400 hover:text-[#437B7E] transition-colors duration-200"
           >
             <span className="text-sm">Back to Top</span>
             <FaArrowUp className="text-sm" />
